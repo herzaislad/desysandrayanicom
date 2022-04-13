@@ -20,25 +20,40 @@
   text-align: center;
 }
 */ 
-#boxes {
-	display: table;
-	height: 100%;
-	width: 100%;	
+
+
+#dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 75%;
+  max-width: 985px;
+  margin: auto;
+  position: relative;
 }
 
-#boxes #dialog {
-	display: table-cell;
-	vertical-align: middle;
-	width: 925px;
-	margin-right: auto;
-	margin-left: auto;
+
+
+#dialog img#main-intro {
+  width: 100%;
+  opacity: 0;
+  animation: dialog-content-anim 2s forwards;
 }
 
-#mom {
-	width: 434px;
-	height: 65px;
-	position: relative;
-	z-index: 20;
-	margin-top: 458px;
-	margin-left: -520px;
+#dialog img#my-name {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  animation: dialog-content-anim 2s 1s forwards;
+}
+
+@keyframes dialog-content-anim {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

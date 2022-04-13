@@ -13,7 +13,6 @@
     
 <!-- script utk popup1 start -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script> 
-	<script src="js/popup_1a.js"></script>
 	<script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -34,15 +33,41 @@
 <script>
 $(document).ready(function(){
   $(window).scroll(function() {
-    if ($(window).scrollTop() > 1750) {
-      $("#cloud1, #cloud2, #cloud3").removeClass("cloud-off").addClass("cloud-on");
+    var page3 = $("#page3");
+    console.log({ page3 });
+    var page3TopDistanceToTop = page3[0].getBoundingClientRect().top;
+
+    if (page3TopDistanceToTop <= 0) {
+      // if page3 scroll passing up beyond viewport top edge
+      $(".clouds-wrapper").addClass('showed');
     } else {
-      $("#cloud1, #cloud2, #cloud3").removeClass("cloud-on").addClass("cloud-off");
+      $(".clouds-wrapper").removeClass('showed');
     }
   });
 });
 </script>
 <!-- script utk popup3 end --> 
+
+
+<!-- script utk flowers start -->
+<script>
+$(document).ready(function(){
+  $(".triggers-petals").mouseenter(function() {
+    var thisId = $(this).attr('id'); // eg.: "trigger-petal_2"
+    var targetSplitText = thisId.split('-') // split result: (0) "trigger"; (1) "petal_2"
+    var targetId = targetSplitText[1] // take index (1): "petal_2"
+    $("#"+targetId).css({ opacity: 1 });
+  });
+
+  $(".triggers-petals").mouseleave(function() {
+    var thisId = $(this).attr('id'); // eg.: "trigger-petal_2"
+    var targetSplitText = thisId.split('-') // split result: (0) "trigger"; (1) "petal_2"
+    var targetId = targetSplitText[1] // take index (1): "petal_2"
+    $("#"+targetId).css({ opacity: 0 });
+  });
+});
+</script>
+<!-- script utk flowers end -->
 
 <!----- PARALAX JQUERY START --->
 <script>
@@ -76,7 +101,7 @@ $(document).ready(function() {
     
 </head>
 
-<body style="height:3855px;">
+<body>
 
 <!----- HEADER START--->
 <header id="header">
@@ -97,66 +122,46 @@ $(document).ready(function() {
 <!----- SLIDES START --->
 
 <div id="page1">
-	<div class="content1">
+
 
 <!----- poopup START --->
-		<div id="boxes">
-  			<div style="display: none;" id="dialog">
-            	<img src="images/slide_1a.png" />
+	
+      <div id="dialog">
+        <img id="main-intro" src="images/slide_1a.png" />
+        <img id="my-name" src="images/slide_1b.png" />
 			</div>
-            <div style="display: none;" id="mom">
-            	<img src="images/slide_1b.png" />
-			</div>
-		</div>
 <!----- poopup end --->
 
-	</div>
 </div>
 
 <div id="page2">
 	<div class="content">
-      <div id="flower">
-   	  <img src="images/flower.png" usemap="#Map1" />
-      <map name="Map1">
-      	<area shape="poly" coords="160,145,131,108,151,61,197,41,246,61,266,103,246,146,197,135" href="#" onmouseover="getElementById('petal_1').src='images/petal_1_on.png'" onMouseOut="getElementById('petal_1').src='images/petal_1.png'"> 
-        <area shape="poly" coords="252,156,268,119,304,112,336,126,361,156,358,203,338,227,305,244,272,232,270,190" href="#" onmouseover="getElementById('petal_2').src='images/petal_2_on.png'" onMouseOut="getElementById('petal_2').src='images/petal_2.png'">
-        <area shape="poly" coords="268,239,309,251,324,276,322,313,299,342,262,356,226,347,205,322,200,285,242,274" href="#" onmouseover="getElementById('petal_3').src='images/petal_3_on.png'" onMouseOut="getElementById('petal_3').src='images/petal_3.png'">
-        <area shape="poly" coords="199,287,192,331,161,354,114,352,83,325,77,283,92,246,135,243,157,270" href="#" onmouseover="getElementById('petal_4').src='images/petal_4_on.png'" onMouseOut="getElementById('petal_4').src='images/petal_4.png'">
-        <area shape="poly" coords="130,237,84,240,52,220,37,184,45,144,84,114,120,112,157,148,127,186" href="#" onmouseover="getElementById('petal_5').src='images/petal_5_on.png'" onMouseOut="getElementById('petal_5').src='images/petal_5.png'">
-        <area shape="circle" coords="199,210,11" href="#image-1">
-      </map>
+    <div id="flower-wrapper">
+      <img class="petals" id="petal_1" src="images/petal_1_on.png" />
+      <img class="petals" id="petal_2" src="images/petal_2_on.png" />
+      <img class="petals" id="petal_3" src="images/petal_3_on.png" />
+      <img class="petals" id="petal_4" src="images/petal_4_on.png" />
+      <img class="petals" id="petal_5" src="images/petal_5_on.png" />
+   	  <img id="flower" src="images/flower.png" />
+      <div id="trigger-wrapper">
+        <div class="triggers-petals" id="trigger-petal_1"></div>
+        <div class="triggers-petals" id="trigger-petal_2"></div>
+        <div class="triggers-petals" id="trigger-petal_3"></div>
+        <div class="triggers-petals" id="trigger-petal_4"></div>
+        <div class="triggers-petals" id="trigger-petal_5"></div>
       </div>
-      <div class="spacer1"></div>    
-	  <div id="wrapper">
-       	  <div id="petal1">
-        		<img src="images/petal_1.png" alt="petal2" id="petal_1">
-          </div>
-          <div id="petal2">
-        		<img src="images/petal_2.png" alt="petal2" id="petal_2">
-          </div>
-          <div id="petal3">
-        		<img src="images/petal_3.png" alt="petal2" id="petal_3">
-          </div>
-          <div id="petal4">
-        		<img src="images/petal_4.png" alt="petal2" id="petal_4">
-          </div>
-          <div id="petal5">
-        		<img src="images/petal_5.png" alt="petal2" id="petal_5">
-          </div>
-        </div>         
-        <div class="lb-overlay" id="image-1">
-		  <img src="images/center.png" alt="image1">
-          <a href="#page" class="lb-close">X</a>
 		</div>         
   </div>
 </div>
 
 <div id="page3">
 	<div class="content">        
-		<div><img src="images/slide_3.png"></div>
-        <div id="cloud1" class="cloud-off"><img src="images/cloud_1.png"></div>
-      	<div id="cloud2" class="cloud-off"><img src="images/cloud_2.png"></div>
-      	<div id="cloud3" class="cloud-off"><img src="images/cloud_3.png"></div>
+		<div><img id="illustration" src="images/slide_3.png"></div>
+    <div class="clouds-wrapper">
+      <div id="cloud1" class="clouds"><img src="images/cloud_1.png"></div>
+      <div id="cloud2" class="clouds"><img src="images/cloud_2.png"></div>
+      <div id="cloud3" class="clouds"><img src="images/cloud_3.png"></div>
+    </div>
 	</div>
 </div>
 

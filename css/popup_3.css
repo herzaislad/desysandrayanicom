@@ -1,28 +1,71 @@
-#cloud1 {
+.clouds-wrapper {
 	position: fixed;
-	top: 60px;
-	left: 770px;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 0;
+	height: 100vh;
+	margin: auto;
+}
+
+.clouds {
+	width: 180px;
+	display: block;
+}
+
+@media (max-width: 720px) {
+	.clouds {
+		width: 120px;
+	}
+}
+
+.clouds img {
+	display: block;
+	width: 100%;
+	transition: all ease 300ms;
+}
+
+#cloud1 {
+	position: absolute;
+	top: 10%;
+}
+
+.clouds-wrapper #cloud1 img {
+	opacity: 0;
+	transform: translateX(200%);
+}
+
+.clouds-wrapper.showed #cloud1 img {
 	opacity: 0.4;
+	transform: translateX(130%);
 }
 
 #cloud2 {
-	position: fixed;
+	position: absolute;
 	top: 140px;
-	left: 300px;
-	opacity: 0.3;
+}
+
+.clouds-wrapper #cloud2 img {
+	opacity: 0;
+	transform: translateX(-200%);
+}
+
+.clouds-wrapper.showed #cloud2 img {
+	opacity: 0.4;
+	transform: translateX(-130%);
 }
 
 #cloud3 {
-	position: fixed;
+	position: absolute;
 	top: 530px;
-	left: 1020px;
+}
+
+.clouds-wrapper #cloud3 img {
+	opacity: 0;
+	transform: translateX(-150%);
+}
+
+.clouds-wrapper.showed #cloud3 img {
 	opacity: 0.4;
-}
-
-.cloud-off {
-	display: none;
-}
-
-.cloud-on {
-	z-index: 100;
+	transform: translateX(0%);
 }

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Div</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(function() {
+    //caches a jQuery object containing the header element
+    var div = $(".clearHeader");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 50) {
+            div.removeClass('clearHeader').addClass("darkHeader");
+        } else {
+            div.removeClass("darkHeader").addClass('clearHeader');
+        }
+    });
+});
+</script>
+
+<style type="text/css">
+
+.clearHeader {
+	height: 200px;
+	background-color: rgba(107,107,107,0.1);
+	position: fixed;
+	top: 10px;
+	width: 900px;
+	display: none;
+}    
+
+.darkHeader { 
+    height: 100px; 
+    background-color: rgba(130,33,201,0.8);
+    position: fixed;
+    top:10px;
+    width: 900px;   
+}
+
+.content {
+	background-color: #3F0;
+	height: 900px;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<div class="clearHeader">test</div>
+<div class="content">content</div>
+
+</body>
+</html>

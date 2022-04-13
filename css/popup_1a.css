@@ -1,0 +1,44 @@
+/*
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+} 
+
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:900px;
+  height:537px;
+  display:none;
+  z-index:10;
+  border-radius: 15px;
+  text-align: center;
+}
+*/ 
+#boxes {
+	display: table;
+	height: 100%;
+	width: 100%;	
+}
+
+#boxes #dialog {
+	display: table-cell;
+	vertical-align: middle;
+	width: 925px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#mom {
+	width: 434px;
+	height: 65px;
+	position: relative;
+	z-index: 20;
+	margin-top: 458px;
+	margin-left: -520px;
+}

@@ -1,0 +1,28 @@
+#cloud1 {
+	position: fixed;
+	top: 60px;
+	left: 770px;
+	opacity: 0.4;
+}
+
+#cloud2 {
+	position: fixed;
+	top: 140px;
+	left: 300px;
+	opacity: 0.3;
+}
+
+#cloud3 {
+	position: fixed;
+	top: 530px;
+	left: 1020px;
+	opacity: 0.4;
+}
+
+.cloud-off {
+	display: none;
+}
+
+.cloud-on {
+	z-index: 100;
+}

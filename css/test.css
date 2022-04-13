@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+#satu {
+	height: 225px;
+	width: 327px;
+	left: 100px;
+	top: 0px;
+	z-index: 100;
+}
+#img1 {
+	z-index: 10;
+}
+#img3 {
+	z-index: -10;
+}
+
+
+#dua {
+	height: 119px;
+	width: 140px;
+	left: 95px;
+	top: 0px;
+	z-index: 9;
+	position: relative;
+	display: inline;
+	float: left;
+}
+#tiga {
+	height: 280px;
+	width: 175px;
+	left: 72px;
+	top: -119px;
+	z-index: 1;
+	position: relative;
+	display: inline;
+	float: left;
+}
+
+
+#wrapper {
+	height: 600px;
+	width: 600px;
+	background-color: #FFC;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}

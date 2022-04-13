@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Sandra</title>
+    <link rel="icon" type="images/png" href="images/favicon.png">
+    <!--<link rel="icon" href="/favicon.ico" type="image/x-icon" href="images/favicon.ico"> -->
+	<link rel="stylesheet" href="css/parallax_style.css"/>
+	<link href="css/popup_1a.css" rel="stylesheet" type="text/css">
+	<link href="css/popup_2.css" rel="stylesheet" type="text/css">
+	<link href="css/popup_3.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    
+<!-- script utk popup1 start -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script> 
+	<script src="js/popup_1a.js"></script>
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>       
+<!-- script utk popup1 end -->    
+
+<!-- script utk popup3 start -->
+<script>
+$(document).ready(function(){
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 1750) {
+      $("#cloud1, #cloud2, #cloud3").removeClass("cloud-off").addClass("cloud-on");
+    } else {
+      $("#cloud1, #cloud2, #cloud3").removeClass("cloud-on").addClass("cloud-off");
+    }
+  });
+});
+</script>
+<!-- script utk popup3 end --> 
+
+<!----- PARALAX JQUERY START --->
+<script>
+
+<!----- JQUERY FOR SLIDING NAVIGATION --->   
+$(document).ready(function() {
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().top;
+
+<!----- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV--->   
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollTop: targetOffset}, 1000);
+           return false;
+         });
+      }
+    }
+  });
+
+}); 
+
+</script>
+<!----- PARALAX JQUERY END --->    
+    
+</head>
+
+<body style="height:3855px;">
+
+<!----- HEADER START--->
+<header id="header">
+	<div class="content">
+		<div id="logo"><img src="images/flower_small_4.png"></div>        
+        <div id="audio">
+ 			<audio controls autoplay>
+				<source src="audio/carrying_you.mp3" type="audio/mp3">
+				Your browser does not support the audio element.
+			</audio>        
+        </div>		
+        <nav id="nav">
+			<ul>
+				<li><a href="#page1">I am</a></li>
+				<li><a href="#page2">I love</a></li>
+				<li><a href="#page3">It's me</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<!----- HEADER END---> 
+
+<!----- SLIDES START --->
+
+<div id="page1">
+	<div class="content1">
+
+<!----- poopup START --->
+		<div id="boxes">
+  			<div style="display: none;" id="dialog">
+            	<img src="images/slide_1a.png" />
+			</div>
+            <div style="display: none;" id="mom">
+            	<img src="images/slide_1b.png" />
+			</div>
+		</div>
+<!----- poopup end --->
+
+	</div>
+</div>
+
+<div id="page2">
+	<div class="content">
+      <div id="flower">
+   	  <img src="images/flower.png" usemap="#Map1" />
+      <map name="Map1">
+      	<area shape="poly" coords="160,145,131,108,151,61,197,41,246,61,266,103,246,146,197,135" href="#" onmouseover="getElementById('petal_1').src='images/petal_1_on.png'" onMouseOut="getElementById('petal_1').src='images/petal_1.png'"> 
+        <area shape="poly" coords="252,156,268,119,304,112,336,126,361,156,358,203,338,227,305,244,272,232,270,190" href="#" onmouseover="getElementById('petal_2').src='images/petal_2_on.png'" onMouseOut="getElementById('petal_2').src='images/petal_2.png'">
+        <area shape="poly" coords="268,239,309,251,324,276,322,313,299,342,262,356,226,347,205,322,200,285,242,274" href="#" onmouseover="getElementById('petal_3').src='images/petal_3_on.png'" onMouseOut="getElementById('petal_3').src='images/petal_3.png'">
+        <area shape="poly" coords="199,287,192,331,161,354,114,352,83,325,77,283,92,246,135,243,157,270" href="#" onmouseover="getElementById('petal_4').src='images/petal_4_on.png'" onMouseOut="getElementById('petal_4').src='images/petal_4.png'">
+        <area shape="poly" coords="130,237,84,240,52,220,37,184,45,144,84,114,120,112,157,148,127,186" href="#" onmouseover="getElementById('petal_5').src='images/petal_5_on.png'" onMouseOut="getElementById('petal_5').src='images/petal_5.png'">
+      </map>
+      </div>
+      <div class="spacer1"></div>    
+	  <div id="wrapper">
+       	  <div id="petal1">
+        		<img src="images/petal_1.png" alt="petal2" id="petal_1">
+          </div>
+          <div id="petal2">
+        		<img src="images/petal_2.png" alt="petal2" id="petal_2">
+          </div>
+          <div id="petal3">
+        		<img src="images/petal_3.png" alt="petal2" id="petal_3">
+          </div>
+          <div id="petal4">
+        		<img src="images/petal_4.png" alt="petal2" id="petal_4">
+          </div>
+          <div id="petal5">
+        		<img src="images/petal_5.png" alt="petal2" id="petal_5">
+          </div>
+        </div>         
+        <div class="lb-overlay" id="image-1">
+		  <img src="images/center.png" alt="image1">
+          <a href="#page" class="lb-close">X</a>
+		</div>         
+  </div>
+</div>
+
+<div id="page3">
+	<div class="content">        
+		<div><img src="images/slide_3.png"></div>
+        <div id="cloud1" class="cloud-off"><img src="images/cloud_1.png"></div>
+      	<div id="cloud2" class="cloud-off"><img src="images/cloud_2.png"></div>
+      	<div id="cloud3" class="cloud-off"><img src="images/cloud_3.png"></div>
+	</div>
+</div>
+
+<!----- SLIDES END --->
+
+</body>
+</html>

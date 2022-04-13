@@ -1,0 +1,25 @@
+/*
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+} 
+*/ 
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:900px;
+  height:537px;
+  display:none;
+  z-index:10;
+  border-radius: 15px;
+  text-align: center;
+}
+#boxes #dialog {
+  width:900px; 
+  height:auto;
+}

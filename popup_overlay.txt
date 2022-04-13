@@ -1,0 +1,12 @@
+<a href="#image-1">
+	<img src="images/thumbimage1.png" alt="orange"> 
+	<span>01</span>
+</a>
+
+
+<div class="lb-overlay" id="image-1">
+	<a href="#page" class="lb-close">x Close</a>
+	<img src="images/image1.png" alt="image1">
+	<h3>Digital <span>Publishing - I</h3>
+	<p>"Playful Orange" . 101 Graphic Sollutions task. Inspired to use orange fruit as an example. Created by vector using Adobe Illustrator.</p>
+</div>

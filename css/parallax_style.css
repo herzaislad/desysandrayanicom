@@ -1,0 +1,188 @@
+/*
+Theme Name: Simple Parallax Website
+Description: Simple Parallax Scrolling Effect
+Author: Samuel Dalusung
+*/
+
+/*= GENERAL STYLING
+--------------------------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+h1 { 
+	font-weight:normal;
+	font-size: 55px;
+	text-align: center;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+   font-weight: normal;
+   font-size: 40px;
+   text-align: center;
+   color: #fff;
+   margin: 0;
+   padding: 0;
+}
+
+h3 {
+   font-weight: normal;
+   font-size: 16px;
+   text-align: center;
+   margin: 5px 0;
+   padding: 0;
+   z-index: 1;
+   position: relative;
+}
+
+.content{ margin: 0 auto; width: 960px; }
+.content1 {
+	margin: 0 auto;
+	width: 960px;
+	height: 100vh;
+}
+#wrapper {
+	height: 900px;
+	width: 600px;
+	text-align: center;
+	position: relative;
+	z-index: 5;
+	left: -70px;
+	top: -400px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+.spacer1 {
+	display: block;
+	height: 100px;
+	width: 900px;
+	clear: both;
+}
+#petal1 {
+	height: 295px;
+	z-index: 5;
+}
+#petal2 {
+	height: 338px;
+	z-index: 4;
+	position: relative;
+	left: 125px;
+	top: -205px;
+}
+#petal3 {
+	height: 338px;
+	z-index: 3;
+	position: relative;
+	left: 74px;
+	top: -394px;
+}
+#petal4 {
+	height: 338px;
+	z-index: 2;
+	position: relative;
+	left: -78px;
+	top: -736px;
+}
+#petal5 {
+	height: 338px;
+	z-index: 1;
+	position: relative;
+	left: -127px;
+	top: -1219px;
+}
+
+#flower {
+	height: 400px;
+	width: 400px;
+	position: relative;
+	left: 210px;
+	top: 190px;
+	z-index: 10;
+}
+
+
+/*= HEADER & NAVIGATION
+--------------------------------------------------------*/
+#header {
+	width: 100%;
+	background: url('../images/header-bg.png');
+	height: 50px;
+	position: fixed;
+	z-index: 100;
+}
+
+#nav { width: 410px; float: right; margin-top: 10px; }
+#logo {
+	color: #fff;
+	text-decoration: none;
+	float: left;
+	font-size: 30px;
+	margin-top: 8px;
+	color: #fff;
+	font-weight: bold;
+}
+
+#audio {
+	float: left;
+	margin-top: 10px;	
+	margin-left: 30px;		
+}
+#nav ul{
+	list-style: none;
+	display: block;
+	margin: 0 auto;
+	list-style: none;	
+}
+
+#nav li{
+	margin-top: 9px;	
+	float: left;
+	padding-left: 21px;
+}
+
+#nav li a { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; color: #fff; opacity:0.6; font-size: 16px; text-decoration: none; }
+#nav li a:hover { color: #fff; opacity:1;  }
+#nav li a.active { color: #fff; opacity:1; border-bottom: 1px solid #fff; }
+
+
+/*= SLIDES STYLING
+--------------------------------------------------------*/
+
+#page1, #page2, #page3, #page4, #page5 { width: 100%; z-index: 1;}
+#page1{
+	background-color: #e40099;
+	background:url('../images/page1.png') 50% 0 no-repeat fixed;
+	height: 900px;
+	margin: 0;
+	background-size: cover;
+}
+
+#page2{
+	background-color: #ffc5b8;
+	background:url('../images/page2.png') 50% 0 no-repeat fixed;
+	height: 900px;
+	margin: 0;
+	background-size: cover;
+	overflow: hidden;
+}
+
+#page3{
+	background-color: #ba99c3;
+	color: #fff;
+	margin: 0;	
+	height: 2055px;
+	background-size: cover;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $("#div1").removeClass("start").addClass("test");
+    } else {
+      $("#div1").removeClass("test").addClass("start");
+    }
+  });
+});
+</script>
+<style>
+.start {
+	background-color: #CCC;
+	display: none;
+}
+.test {
+    background-color: yellow;
+	position: fixed;
+}
+div {
+	height: 200px;
+	width: 500px;
+}
+</style>
+</head>
+<body style="height:1550px;">
+
+<div id="div1" class="start" >This is div1</div>
+<div id="div2">This is div2</div>
+
+</body>
+</html>
